@@ -1,4 +1,4 @@
-# HRMS Portal – Liferay DXP
+# HRMS Portal
 
 A custom-built Human Resource Management System (HRMS) portal developed using **Liferay DXP**. This portal supports employee onboarding, profile management, and admin-level control using Service Builder, MVC Portlet architecture, and a custom theme.
 
