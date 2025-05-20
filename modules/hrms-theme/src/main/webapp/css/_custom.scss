@@ -1,0 +1,203 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+@import 'portlet/_portlet';
+@import 'portlet/_portlet_decorator';
+
+
+$primary-color: #006400;
+$body-bg: #ffffff;
+$body-color: #222;
+$light-gray: #f9f9f9;
+
+body {
+  background-color: $body-bg;
+  color: $body-color;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.brand span{
+	font-size: 20px;
+	margin-left: 7px;
+}
+
+
+
+#hrms-footer {
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h6 {
+    font-weight: bold;
+  }
+}
+
+
+/* Top Navigation Bar */
+.top-nav {
+  background-color: #f8f9fa; /* Light gray background */
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+  padding: 0.25rem 0;
+}
+
+/* Container spacing */
+.top-nav .container {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Left Section: Contact Info */
+.left-top-nav a {
+  color: #006400;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.left-top-nav a:hover {
+  color: #004d00;
+}
+
+/* Right Section: User Info */
+.right-top-nav {
+  text-align: right;
+}
+
+.right-top-nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.right-top-nav a:hover {
+  color: #006400;
+}
+
+/* Inline list items */
+.top-nav .list-inline-item {
+  margin-right: 1rem;
+}
+
+.top-nav .list-inline-item:last-child {
+  margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .right-top-nav,
+  .left-top-nav {
+    text-align: center !important;
+  }
+
+  .top-nav .list-inline-item {
+    display: block;
+    margin: 0.25rem 0;
+  }
+}
+
+
+
+/* General Navbar Styling */
+.navbar {
+    background-color: #ffffff; /* White background */
+    border-bottom: 1px solid #e0e0e0; /* Light border for separation */
+}
+
+.navbar-toggler {
+    border: none; /* Removes the default border */
+    background-color: transparent; /* Transparent background */
+    outline: none; /* Removes outline on focus */
+}
+
+.navbar-toggler-icon {
+    width: 30px; /* Width of the toggle icon */
+    height: 2px; /* Height of the lines */
+    background-color: #006400; /* Dark Green color for the toggler icon */
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    background-color: transparent; /* Transparent when hovered or focused */
+}
+
+/* Navbar Collapse Styling */
+.navbar-collapse {
+    display: flex; /* Makes the navbar collapse inline */
+    justify-content: flex-end; /* Aligns the items to the right */
+}
+
+.navbar-collapse.collapse {
+    display: none; /* Hidden by default */
+}
+
+.navbar-collapse.show {
+    display: flex; /* Shows the menu when expanded */
+}
+
+/* Navigation Links Styling */
+.navbar-nav {
+    list-style: none; /* Removes default list styling */
+    margin: 0; /* Resets margin */
+    padding: 0; /* Resets padding */
+}
+
+.navbar-nav > li {
+    display: inline-block; /* Aligns items horizontally */
+    margin-left: 20px; /* Adds spacing between items */
+}
+
+.navbar-nav > li > a {
+    color: #006400; /* Dark Green color for links */
+    text-decoration: none; /* Removes underline */
+    padding: 10px 15px; /* Adds padding around links */
+    font-weight: 600; /* Makes the text bold */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar-nav > li > a:hover {
+    color: #004d00; /* Darker green on hover */
+}
+
+/* Mobile View (Below 768px) */
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color: #ffffff; /* Background color for the collapse menu */
+        position: absolute; /* Position it over the content */
+        top: 100%; /* Moves it down */
+        left: 0;
+        right: 0;
+        padding: 15px;
+        border-top: 1px solid #e0e0e0; /* Adds border at the top */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stacks items vertically */
+        align-items: flex-start; /* Aligns the links to the left */
+    }
+
+    .navbar-nav > li {
+        margin-left: 0; /* Resets the left margin in mobile view */
+        margin-bottom: 15px; /* Adds spacing between items */
+    }
+    
+    .navbar-toggler {
+        margin-right: 15px; /* Adds spacing on the right of the toggle button */
+    }
+}
+
+

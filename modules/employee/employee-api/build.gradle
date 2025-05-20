@@ -1,0 +1,5 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.portal.api"
+	compileOnly group: 'org.hibernate', name: 'hibernate-core', version: '5.6.7.Final'
+    compileOnly group: 'net.bytebuddy', name: 'byte-buddy', version: '1.12.8'
+}

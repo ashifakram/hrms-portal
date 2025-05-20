@@ -1,0 +1,7 @@
+Bundle-Name: employee-web
+Bundle-SymbolicName: com.esquare.hrms.web
+Bundle-Version: 1.0.0
+Export-Package: com.esquare.hrms.web.constants
+Provide-Capability:\
+	liferay.language.resources;\
+		resource.bundle.base.name="content.Language"

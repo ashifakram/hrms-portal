@@ -1,0 +1,9 @@
+Bundle-Name: employee-service
+Bundle-SymbolicName: com.esquare.hrms.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
+Import-Package: \
+    org.hibernate.proxy;version="[5.6,6)",\
+    *

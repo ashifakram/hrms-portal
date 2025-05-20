@@ -1,0 +1,21 @@
+create table HRMS_Employee (
+	uuid_ VARCHAR(75) null,
+	employeeId LONG not null primary key,
+	groupId LONG,
+	companyId LONG,
+	userId LONG,
+	userName VARCHAR(75) null,
+	createDate DATE null,
+	modifiedDate DATE null,
+	name VARCHAR(75) null,
+	email VARCHAR(75) null,
+	designation VARCHAR(75) null,
+	contactNumber VARCHAR(75) null,
+	address VARCHAR(75) null,
+	panNumber VARCHAR(75) null,
+	aadhaarNumber VARCHAR(75) null,
+	passportNumber VARCHAR(75) null,
+	photo VARCHAR(75) null,
+	panImage VARCHAR(75) null,
+	aadhaarImage VARCHAR(75) null
+);

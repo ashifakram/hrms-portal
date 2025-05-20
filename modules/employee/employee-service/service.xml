@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.esquare.hrms">
+	<namespace>HRMS</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Employee" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+		<column name="employeeId" type="long" primary="true" />
+		
+		<!-- Group instance -->
+        <column name="groupId" type="long" />
+        
+        <!-- Audit fields -->
+        <column name="companyId" type="long" />
+        <column name="userId" type="long" />
+        <column name="userName" type="String" />
+        <column name="createDate" type="Date" />
+        <column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+        <column name="name" type="String" />
+        <column name="email" type="String" />
+        <column name="designation" type="String" />
+        <column name="contactNumber" type="String" />
+        <column name="address" type="String" />
+        <column name="panNumber" type="String" />
+    	<column name="aadhaarNumber" type="String" />
+    	<column name="passportNumber" type="String" />
+    	<column name="photo" type="String" />
+    	<column name="panImage" type="String" />
+    	<column name="aadhaarImage" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="employeeId" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder return-type="Collection" name="Name">
+			<finder-column name="name"></finder-column>
+		</finder>
+		<finder return-type="Collection" name="PanNumber">
+			<finder-column name="panNumber"></finder-column>
+		</finder>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+</service-builder>

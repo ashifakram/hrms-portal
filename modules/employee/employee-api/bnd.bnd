@@ -1,0 +1,10 @@
+Bundle-Name: employee-api
+Bundle-SymbolicName: com.esquare.hrms.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.esquare.hrms.exception,\
+	com.esquare.hrms.model,\
+	com.esquare.hrms.service,\
+	com.esquare.hrms.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../employee-service/service.xml
